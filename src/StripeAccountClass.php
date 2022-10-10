@@ -3,6 +3,7 @@ namespace Chaitralybiz4\StripePkg;
 require_once('vendor/autoload.php');
 //global $stripe;
 class stripeAccountClass {
+    //this is stripe class
 
     static $stripe_api_key;
 
