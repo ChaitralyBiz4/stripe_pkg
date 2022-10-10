@@ -12,6 +12,10 @@ class ComposerStaticInit4e34317986c21cf568274e786b65e783
     );
 
     public static $prefixLengthsPsr4 = array (
+        'S' => 
+        array (
+            'Stripe\\' => 7,
+        ),
         'P' => 
         array (
             'PhpParser\\' => 10,
@@ -28,6 +32,10 @@ class ComposerStaticInit4e34317986c21cf568274e786b65e783
     );
 
     public static $prefixDirsPsr4 = array (
+        'Stripe\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/stripe/stripe-php/lib',
+        ),
         'PhpParser\\' => 
         array (
             0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
@@ -43,6 +51,7 @@ class ComposerStaticInit4e34317986c21cf568274e786b65e783
         'Chaitralybiz4\\StripePkg\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
+            1 => __DIR__ . '/../..' . '/tests',
         ),
     );
 
