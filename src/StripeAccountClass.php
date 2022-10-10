@@ -15,6 +15,9 @@ class stripeAccountClass {
         }
         $this -> stripe_api_key = $stripe_api_key;
     }
+    public function helloWorld(){
+        echo "Hello world.....";
+    }
     
     function initializeStripeClient(){
         $stripe = new \Stripe\StripeClient(["api_key" => $this->stripe_api_key]);
