@@ -1,5 +1,6 @@
 <?php 
 namespace Chaitralybiz4\StripePkg;
+use Stripe;
 require_once('vendor/autoload.php');
 //global $stripe;
 class stripeAccountClass {
