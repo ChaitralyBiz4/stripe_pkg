@@ -1,0 +1,24 @@
+{
+    "name": "chaitralybiz4/stripe_pkg",
+    "description": "This is PHP library for stripe wrapper class.",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Chaitralybiz4\\StripePkg\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Chaitraly Bhagyawant",
+            "email": "chaitrali.bhagyawant@biz4solutions.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Chaitralybiz4\\StripePkg\\": "tests/"
+        }
+    }
+}
