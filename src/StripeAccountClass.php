@@ -1,6 +1,7 @@
 <?php 
 namespace Chaitralybiz4\StripePkg;
 use Stripe;
+use Exception;
 require_once('vendor/autoload.php');
 //global $stripe;
 class stripeAccountClass {
@@ -20,8 +21,15 @@ class stripeAccountClass {
     }
     
     public function initializeStripeClient($input_stripe_api_key){
-       $stripe_api_key = new \Stripe\StripeClient(["api_key" => $input_stripe_api_key]);
-       return $stripe_api_key;
+        try{
+            $stripe_api_key = new \Stripe\StripeClient(["api_key" => $input_stripe_api_key]);
+            return $stripe_api_key;
+        }
+        catch(Exception $e){
+            echo $e->getMessage() . "<br/>";
+            return "fail";
+        }
+      
     }
 
     public function setStripeApiKey(){
