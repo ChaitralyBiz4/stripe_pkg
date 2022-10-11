@@ -8,20 +8,20 @@ class stripeAccountClass {
 
     static $stripe_api_key;
 
-    public function __construct($stripe_api_key){
-        if($stripe_api_key == '')
-        {
-            return false;
-        }
-        $this -> stripe_api_key = $stripe_api_key;
-    }
+    // public function __construct($stripe_api_key){
+    //     if($stripe_api_key == '')
+    //     {
+    //         return false;
+    //     }
+    //     $this -> stripe_api_key = $stripe_api_key;
+    // }
     public function helloWorld(){
         echo "Hello world.....";
     }
     
-    public function initializeStripeClient(){
-        $stripe = new \Stripe\StripeClient(["api_key" => $this->stripe_api_key]);
-       return $stripe;
+    public function initializeStripeClient($input_stripe_api_key){
+       $stripe_api_key = new \Stripe\StripeClient(["api_key" => $input_stripe_api_key]);
+       return $stripe_api_key;
     }
 
     public function setStripeApiKey(){
