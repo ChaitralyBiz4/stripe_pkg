@@ -19,17 +19,17 @@ class stripeAccountClass {
         echo "Hello world.....";
     }
     
-    function initializeStripeClient(){
+    public function initializeStripeClient(){
         $stripe = new \Stripe\StripeClient(["api_key" => $this->stripe_api_key]);
        return $stripe;
     }
 
-    function setStripeApiKey(){
+    public function setStripeApiKey(){
         \Stripe\Stripe::setApiKey($this->stripe_api_key);
 
     }
 
-    function createStripeConnectAccount($account_type){
+    public function createStripeConnectAccount($account_type){
         if($account_type == '')
         {
             return false;
@@ -46,7 +46,7 @@ class stripeAccountClass {
          return $stripe_account;
     }
 
-    function createStripeConnectAccountLink($account_id){
+    public function createStripeConnectAccountLink($account_id){
         if($account_id == '')
         {
             return false;
@@ -61,7 +61,7 @@ class stripeAccountClass {
         return $account_link;
     }
 
-    function retrieveStripeAccount($account_id){
+    public function retrieveStripeAccount($account_id){
         if($account_id == '')
         {
             return false;
